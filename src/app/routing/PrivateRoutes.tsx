@@ -3,6 +3,7 @@ import {Route, Routes, Navigate} from 'react-router-dom'
 import {MasterLayout} from '../../_metronic/layout/MasterLayout'
 import TopBarProgress from 'react-topbar-progress-indicator'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
+import {TargetsWrapper} from '../pages/targets/Targets'
 import {MenuTestPage} from '../pages/MenuTestPage'
 import {getCSSVariableValue} from '../../_metronic/assets/ts/_utils'
 import {WithChildren} from '../../_metronic/helpers'
@@ -17,7 +18,6 @@ const PrivateRoutes = () => {
   const InboxPage = lazy(() => import('../modules/apps/chat/InboxPage'))
   const UsersPage = lazy(() => import('../modules/apps/user-management/UsersPage'))
   const LeadsPage = lazy(() => import('../modules/apps/leads/LeadsPage'))
-  const UserContactsPage = lazy(() => import('../modules/apps/user-contacts/UserContactsPage'))
 
   return (
     <Routes>
@@ -28,6 +28,7 @@ const PrivateRoutes = () => {
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='builder' element={<BuilderPageWrapper />} />
         <Route path='menu-test' element={<MenuTestPage />} />
+        <Route path='targets' element={<TargetsWrapper />} />
         {/* Lazy Modules */}
         <Route
           path='crafted/pages/profile/*'
@@ -70,7 +71,7 @@ const PrivateRoutes = () => {
           }
         />
         <Route
-          path='apps/inbox/*'
+          path='inbox/*'
           element={
             <SuspensedView>
               <InboxPage />
@@ -86,21 +87,14 @@ const PrivateRoutes = () => {
           }
         />
         <Route
-          path='apps/leads/*'
+          path='leads/*'
           element={
             <SuspensedView>
               <LeadsPage />
             </SuspensedView>
           }
         />
-        <Route
-          path='apps/user-contacts/*'
-          element={
-            <SuspensedView>
-              <UserContactsPage />
-            </SuspensedView>
-          }
-        />
+        
         {/* Page Not Found */}
         <Route path='*' element={<Navigate to='/error/404' />} />
       </Route>
