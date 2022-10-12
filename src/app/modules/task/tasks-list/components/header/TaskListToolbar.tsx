@@ -24,10 +24,10 @@ const TasksListToolbar = () => {
 
       {/* begin::Add user */}
       <button type='button' className='btn btn-primary' onClick={()=>{
-        navigation('taskadduser')
+        navigation('taskAdduser')
          }}>
         <KTSVG path='/media/icons/duotune/arrows/arr075.svg' className='svg-icon-2' />
-        Add User
+        Add Task
       </button>
       {/* end::Add user */}
     </div>

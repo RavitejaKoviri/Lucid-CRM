@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {
-  CreateDeal,
-  getcampaigns,
-  getcompanies,
-  getdealStatuses,
-  getsource,
-} from "../../_redux/dealAction";
+// import {
+//   CreateDeal,
+//   getcampaigns,
+//   getcompanies,
+//   getdealStatuses,
+//   getsource,
+// } from "../../_redux/taskAction";
 
-export default function DealsAdduser() {
+export default function TaskAdduser() {
   const navigation = useNavigate();
   const dispatch = useDispatch();
   const token = useSelector((state: any) => state?.auth?.authToken);
@@ -20,15 +20,15 @@ export default function DealsAdduser() {
   const status = useSelector((state: any) => state?.deal?.dealStatus);
   console.log(company, "company");
 
-  useEffect(() => {
-    dispatch(getsource(token));
-    dispatch(getcampaigns(token));
-    dispatch(getcompanies(token));
-    dispatch(getdealStatuses(token));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getsource(token));
+  //   dispatch(getcampaigns(token));
+  //   dispatch(getcompanies(token));
+  //   dispatch(getdealStatuses(token));
+  // }, []);
   const [data, setData] = useState({
-    dealName: " ",
-    dealContactPersonName: " ",
+    subject: " ",
+    taskRepeat: " ",
     dealContactPersonPhoneNumber: " ",
     dealContactPersonEmail: " ",
     dealContactPersonAlternateEmail: " ",
@@ -47,10 +47,10 @@ export default function DealsAdduser() {
 
   const handleSubmit = () => {
     console.log(data, "EDIT_PROFILE");
-    dispatch(CreateDeal(data, token));
+    // dispatch(CreateDeal(data, token));
     setData({
-      dealName: " ",
-      dealContactPersonName: " ",
+      subject: " ",
+      taskRepeat: " ",
       dealContactPersonPhoneNumber: " ",
       dealContactPersonEmail: " ",
       dealContactPersonAlternateEmail: " ",
@@ -329,26 +329,40 @@ export default function DealsAdduser() {
                         <form className="form">
                           <div className="form-group row mb-2">
                             <div className="col-lg-6">
-                              <label>Name:</label>
+                              <label>subject:</label>
                               <input
                                 type="text"
-                                value={data.dealName}
+                                value={data.subject}
                                 onChange={handleChange}
-                                name="dealName"
+                                name="subject"
                                 className="form-control"
-                                placeholder="Enter FirstName"
+                                placeholder="Enter subject"
                               />
                             </div>
                             <div className="col-lg-6">
-                              <label>Contact PersonName:</label>
-                              <input
+                              <label>TaskRepeat:</label>
+                              {/* <input
                                 type="text"
-                                value={data.dealContactPersonName}
+                                value={data.taskRepeat}
                                 onChange={handleChange}
-                                name="dealContactPersonName"
+                                name="taskRepeat"
                                 className="form-control"
                                 placeholder="Enter PhoneNumber"
-                              />
+                              /> */}
+                              <select
+                    className="form-select mb-2"
+                    data-control="select2"
+                    data-hide-search="true"
+                    data-placeholder="Select an option"
+                    value={data.campaignSource}
+                    onChange={handleChange}
+                    name="campaignSource"
+                  >
+                    <option></option>
+                    {campaign?.map((item: any) => (
+                      <option value={item?.id}>{item?.campaignName}</option>
+                    ))}
+                  </select>
                             </div>
                           </div>
 
