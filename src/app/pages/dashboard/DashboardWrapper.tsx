@@ -15,12 +15,13 @@ import {
   TablesWidget11,
   MixedWidget6,
 } from '../../../_metronic/partials/widgets'
-import { getAllTasks } from '../../modules/task/tasks-list/_redux/taskAction'
+// import { getAllTasks } from '../../modules/task/tasks-list/_redux/taskAction'
 import { RootStateOrAny } from 'react-redux' 
-import { getcampaigns, getLeads } from '../../modules/leads/leads-list/_redux/leadAction'
-import { getAllContacts } from '../../modules/Contact/contacts-list/_redux/contactAction'
-import { getAllBookings } from '../../modules/booking/bookings-list/_redux/bookingAction'
-import { getAlldeals } from '../../modules/deal/deals-list/_redux/dealAction'
+// import { getcampaigns, getLeads } from '../../modules/leads/leads-list/_redux/leadAction'
+// import { getAllContacts } from '../../modules/Contact/contacts-list/_redux/contactAction'
+// import { getAllBookings } from '../../modules/booking/bookings-list/_redux/bookingAction'
+// import { getAlldeals } from '../../modules/deal/deals-list/_redux/dealAction'
+import { getAllBookings, getAllCampaigns, getAllContacts, getAllDeals, getAllLeads, getAllTasks } from './_redux/dashboardAction'
 const DashboardPage = () => {
 
 const dispatch = useDispatch();
@@ -37,19 +38,19 @@ const dispatch = useDispatch();
   const token:any = useSelector<RootStateOrAny>(({auth}) => auth.authToken,shallowEqual)
   useEffect(() => {
 	  dispatch(getAllTasks(token));
-	  dispatch(getLeads(token));
+	  dispatch(getAllLeads(token));
 	  dispatch(getAllContacts(token));
 	  dispatch(getAllBookings());
-	  dispatch(getAlldeals(token));
-	  dispatch(getcampaigns(token));
+	  dispatch(getAllDeals(token));
+	  dispatch(getAllCampaigns(token));
 	}, []);
 	// const task = useSelector((state) => state?.ManageTaskData?.Tasks);
-	const task:any = useSelector<RootStateOrAny>(({ManageTaskData}) => ManageTaskData.Tasks,shallowEqual)
-	const leads:any = useSelector<RootStateOrAny>(({LeadData}) => LeadData.Leads,shallowEqual)
-	const contacts:any = useSelector<RootStateOrAny>(({ContactData}) => ContactData.Contacts,shallowEqual)
-	const bookings:any = useSelector<RootStateOrAny>(({booking}) => booking.booking,shallowEqual)
-	const deals:any = useSelector<RootStateOrAny>(({deal}) => deal.deals,shallowEqual)
-	const campaigns:any = useSelector<RootStateOrAny>(({LeadData}) => LeadData.campaigns,shallowEqual)
+	const task:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.Tasks,shallowEqual)
+	const leads:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.Leads,shallowEqual)
+	const contacts:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.Contacts,shallowEqual)
+	const bookings:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.booking,shallowEqual)
+	const deals:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.deals,shallowEqual)
+	const campaigns:any = useSelector<RootStateOrAny>(({Dashboard}) => Dashboard.campaigns,shallowEqual)
   console.log(task, "tasks");
   console.log(leads, "leads");
   console.log(contacts, "contacts");
@@ -84,7 +85,7 @@ console.log(token, 'token');
 										<div className="card-body d-flex align-items- mb-3">
 					
 											<div className="d-flex align-items-center">
-												<span className="fs-4hx text-white fw-bold me-6">{leads?.length}</span>
+												<span className="fs-4hx text-white fw-bold me-6">{leads?.length ? leads?.length : 0}</span>
 												<div className="fw-bold fs-6 text-white">
 													<span className="d-block">Leads</span>
 													{/* <span className="">Calls</span> */}
@@ -96,7 +97,7 @@ console.log(token, 'token');
 										<div className="card-footer" style={{borderTop: "1px solid rgba(255, 255, 255, 0.3)", backgroundColor: "rgba(0, 0, 0, 0.15)"}}>
 						
 											<div className="fw-bold text-white py-2">
-												<span className="fs-1 d-block">{leads?.length}</span>
+												<span className="fs-1 d-block">{leads?.length ? leads?.length : 0}</span>
 												<span className="opacity-50">Generated Leads</span>
 											</div>
 							
@@ -121,7 +122,7 @@ console.log(token, 'token');
 										<div className="card-body d-flex align-items- mb-3">
 							
 											<div className="d-flex align-items-center">
-												<span className="fs-4hx text-white fw-bold me-6">{contacts?.length}</span>
+												<span className="fs-4hx text-white fw-bold me-6">{contacts?.length ? contacts?.length : 0}</span>
 												<div className="fw-bold fs-6 text-white">
 													<span className="d-block">Contacts</span>
 													{/* <span className="">Calls</span> */}
@@ -133,7 +134,7 @@ console.log(token, 'token');
 										<div className="card-footer" style={{borderTop: "1px solid rgba(255, 255, 255, 0.3)", backgroundColor: "rgba(0, 0, 0, 0.15)"}}>
 								
 											<div className="fw-bold text-white py-2">
-												<span className="fs-1 d-block">{contacts?.length}</span>
+												<span className="fs-1 d-block">{contacts?.length ? contacts?.length : 0}</span>
 												<span className="opacity-50">Problems Solved</span>
 											</div>
 						
@@ -158,7 +159,7 @@ console.log(token, 'token');
 										<div className="card-body d-flex align-items- mb-3">
 					
 											<div className="d-flex align-items-center">
-												<span className="fs-4hx text-white fw-bold me-6">{task?.length}</span>
+												<span className="fs-4hx text-white fw-bold me-6">{task?.length ? task?.length : 0}</span>
 												<div className="fw-bold fs-6 text-white">
 													<span className="d-block">Tasks</span>
 													{/* <span className="">Calls</span> */}
@@ -170,7 +171,7 @@ console.log(token, 'token');
 										<div className="card-footer" style={{borderTop: "1px solid rgba(255, 255, 255, 0.3)", backgroundColor: "rgba(0, 0, 0, 0.15)"}}>
 						
 											<div className="fw-bold text-white py-2">
-												<span className="fs-1 d-block">{task?.length}</span>
+												<span className="fs-1 d-block">{task?.length ? task?.length : 0}</span>
 												<span className="opacity-50">Tasks Completed</span>
 											</div>
 							
@@ -195,7 +196,7 @@ console.log(token, 'token');
 										<div className="card-body d-flex align-items- mb-3">
 							
 											<div className="d-flex align-items-center">
-												<span className="fs-4hx text-white fw-bold me-6">{deals?.length}</span>
+												<span className="fs-4hx text-white fw-bold me-6">{deals?.length ? deals?.length : 0}</span>
 												<div className="fw-bold fs-6 text-white">
 													<span className="d-block">Deals</span>
 													{/* <span className="">Calls</span> */}
@@ -207,7 +208,7 @@ console.log(token, 'token');
 										<div className="card-footer" style={{borderTop: "1px solid rgba(255, 255, 255, 0.3)", backgroundColor: "rgba(0, 0, 0, 0.15)"}}>
 								
 											<div className="fw-bold text-white py-2">
-												<span className="fs-1 d-block">{deals?.length}</span>
+												<span className="fs-1 d-block">{deals?.length ? deals?.length : 0}</span>
 												<span className="opacity-50">Deals Completed</span>
 											</div>
 						
@@ -298,7 +299,9 @@ console.log(token, 'token');
 									
 										</div>
 							
-									</div></div>
+									</div>
+									</div>
+
                   <div className="col-xl-6">
 						
 									<div className="card h-lg-100" style={{background: "linear-gradient(112.14deg, #FF8A00 0%, #E96922 100%)"}}>
@@ -319,7 +322,7 @@ console.log(token, 'token');
 																<span className="fw-semibold text-white opacity-75">Total Number of Bookings</span>
 																{/* </div> */}
 																{/* <div> */}
-																<h1 className="fs-2x fw-semibold text-white">{bookings?.length}</h1>
+																<h1 className="fs-2x fw-semibold text-white">{bookings?.length ? bookings?.length : 0}</h1>
 																{/* </div> */}
 															</div>
 													
@@ -737,7 +740,7 @@ console.log(token, 'token');
 											
 											<div className="card-title pt-3 mb-0 gap-4 gap-lg-10 gap-xl-15 nav nav-tabs border-bottom-0" data-kt-table-widget-3="tabs_nav">
 											
-												<div className="fs-4 fw-bold pb-3 border-bottom border-3 border-primary cursor-pointer" data-kt-table-widget-3="tab" data-kt-table-widget-3-value="Show All">All Campaigns ({campaigns?.length})</div>
+												<div className="fs-4 fw-bold pb-3 border-bottom border-3 border-primary cursor-pointer" data-kt-table-widget-3="tab" data-kt-table-widget-3-value="Show All">All Campaigns ({campaigns?.length ? campaigns?.length: 0})</div>
 												
 												<div className="fs-4 fw-bold text-muted pb-3 cursor-pointer" data-kt-table-widget-3="tab" data-kt-table-widget-3-value="Pending">Draft</div>
 											
@@ -902,14 +905,14 @@ console.log(token, 'token');
 														<td className="min-w-175px">
 															<div className="position-relative ps-6 pe-3 py-2">
 																<div className="position-absolute start-0 top-0 w-4px h-100 rounded-2 bg-info"></div>
-																<a href="#" className="mb-1 text-dark text-hover-primary fw-bold">{item?.campaignName}</a>
-																<div className="fs-7 text-muted fw-bold">Created on {item?.createdAt?.slice(0,10)}</div>
+																<a href="#" className="mb-1 text-dark text-hover-primary fw-bold">{item?.campaignName ? item?.campaignName : ' '}</a>
+																<div className="fs-7 text-muted fw-bold">Created on {item?.createdAt ? item?.createdAt?.slice(0,10) : ' '}</div>
 															</div>
 														</td>
 														<td>
 															
 															<div className="mb-1 text-dark text-hover-primary fw-bold">
-																{item?.company?.companyName}
+																{item?.company ? item?.company?.companyName : ' '}
 																{/* <a href="#">
 																	<img src="assets/media/svg/brand-logos/facebook-4.svg" className="w-20px" alt="" />
 																</a>
