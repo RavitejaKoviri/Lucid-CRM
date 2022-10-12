@@ -2,7 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 
 const initialProductsState = {
-  Targets: []
+  target: [],
+  Targets:[],
+  Createtarget:[],
+  
+  campaigns: [],
+  Comapnies: [],
+  targetStatus: [],
+  assignedTo: []
+
 };
 
 export const callTypes = {
@@ -32,9 +40,31 @@ export const TargetSlice = createSlice({
       }
     },
 
+    fetechedalltargets: (state, action) => {
+      const { data } = action.payload;
+      state.target = data;
+    },
+   
+    fetchedAllComapniesDetails: (state, action) => {
+      const { data } = action.payload;
+      state.Comapnies = data;
+    },
+    fetchedtargetsStatusesDetails: (state, action) => {
+      const { data } = action.payload;
+      state.targetStatus = data;
+    },
+    fetchedassignedToDetails: (state, action) => {
+      const { data } = action.payload;
+      state.assignedTo = data;
+    },
+    fetchedTarget: (state, action) => {
+      const { data } = action.payload;
+      state.Createtarget = data;
+    },
     getedAllUsersDetails: (state, action) => {
       const { data } = action.payload;
       state.Targets = data;
     }
   },
 });
+
