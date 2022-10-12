@@ -28,7 +28,9 @@ export default function ContactsAdduser() {
   const company = useSelector(
     (state: any) => state?.ContactData?.Comapnies
   );
-
+  const user = useSelector(
+    (state: any) => state?.auth?.users
+  );
   useEffect(() => {
     dispatch(getsource(token))
     dispatch(getcampaigns(token))
@@ -36,7 +38,7 @@ export default function ContactsAdduser() {
   }, [])
 
   const [data, setData] = useState({
-    company: " ",
+    company:user?.company,
     contactCompanyName:" ",
     contactName:" ",
     contactEmail:" ",
@@ -179,62 +181,7 @@ export default function ContactsAdduser() {
 
 
              {/*begin::Status*/}
-             <div className="card card-flush py-4">
-                {/*begin::Card header*/}
-                <div className="card-header">
-                  {/*begin::Card title*/}
-                  <div className="card-title">
-                    <h2>Company</h2>
-                  </div>
-                  {/*end::Card title*/}
-                  {/*begin::Card toolbar*/}
-                  <div className="card-toolbar">
-                    <div
-                      className="rounded-circle bg-success w-15px h-15px"
-                    ></div>
-                  </div>
-                  {/*begin::Card toolbar*/}
-                </div>
-                {/*end::Card header*/}
-                {/*begin::Card body*/}
-                <div className="card-body pt-0">
-                  {/*begin::Select2*/}
-                  <select
-                    className="form-select mb-2"
-                    data-control="select2"
-                    data-hide-search="true"
-                    data-placeholder="Select an option"
-                    value={data.company}
-                    onChange={handleChange}
-                    name="company"
-                  >
-                    <option></option>
-                    {
-                      company?.map((item: any) => (
-                        <option value={item?.id}>{item?.companyName}</option>
-                      ))
-                    }
-
-                  </select>
-                  {/*end::Select2*/}
-                  {/*begin::Description*/}
-                  <div className="text-muted fs-7"></div>
-                  {/*end::Description*/}
-                  {/*begin::Datepicker*/}
-                  <div className="d-none mt-10">
-                    <label className="form-label">
-                      Select publishing date and time
-                    </label>
-                    <input
-                      className="form-control"
-                      id="kt_ecommerce_add_product_status_datepicker"
-                      placeholder="Pick date & time"
-                    />
-                  </div>
-                  {/*end::Datepicker*/}
-                </div>
-                {/*end::Card body*/}
-              </div>
+            
               {/*end::Status*/}
               <div className="card card-flush py-4">
                 {/*begin::Card header*/}
@@ -407,6 +354,17 @@ export default function ContactsAdduser() {
                                 
                               />
                             </div>
+                            <div className="col-lg-6">
+                              <label>Email:</label>
+                              <input
+                                type="text"
+                                value={data.contactEmail}
+                                onChange={handleChange}
+                                name="contactEmail"
+                                className="form-control"
+                                
+                              />
+                            </div>
                             {/*begin::Status*/}
                            
                             {/*end::Status*/}
@@ -422,30 +380,7 @@ export default function ContactsAdduser() {
                             />
                           </div> */}
                           </div>
-                          <div className="form-group row mb-2">
-                            <div className="col-lg-6">
-                              <label>Email:</label>
-                              <input
-                                type="text"
-                                value={data.contactEmail}
-                                onChange={handleChange}
-                                name="contactEmail"
-                                className="form-control"
-                                
-                              />
-                            </div>
-                            <div className="col-lg-6">
-                              <label> Mobile:</label>
-                              <input
-                                type="text"
-                                value={data.contactMobile}
-                                onChange={handleChange}
-                                name="contactMobile"
-                                className="form-control"
-                                
-                              />
-                            </div>
-                          </div>
+                         
                           <div className="form-group row mb-2">
                             <div className="col-lg-6">
                               <label>FirstName:</label>
@@ -465,6 +400,30 @@ export default function ContactsAdduser() {
                                 value={data.contactLastName}
                                 onChange={handleChange}
                                 name="contactLastName"
+                                className="form-control"
+                                
+                              />
+                            </div>
+                          </div>
+                          <div className="form-group row mb-2">
+                          <div className="col-lg-6">
+                              <label>SecondaryEmail:</label>
+                              <input
+                                type="text"
+                                value={data.contactSecondaryEmail}
+                                onChange={handleChange}
+                                name="contactSecondaryEmail"
+                                className="form-control"
+                                
+                              />
+                            </div>
+                            <div className="col-lg-6">
+                              <label> Mobile:</label>
+                              <input
+                                type="text"
+                                value={data.contactMobile}
+                                onChange={handleChange}
+                                name="contactMobile"
                                 className="form-control"
                                 
                               />
@@ -581,19 +540,6 @@ export default function ContactsAdduser() {
                               />
                             </div>
                             <div className="col-lg-6">
-                              <label>SecondaryEmail:</label>
-                              <input
-                                type="text"
-                                value={data.contactSecondaryEmail}
-                                onChange={handleChange}
-                                name="contactSecondaryEmail"
-                                className="form-control"
-                                
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group row mb-2">
-                            <div className="col-lg-6">
                               <label>Notes:</label>
                               <input
                                 type="text"
@@ -604,6 +550,9 @@ export default function ContactsAdduser() {
                               
                               />
                             </div>
+                          </div>
+                          <div className="form-group row mb-2">
+                           
                             <div className="col-lg-6">
                               <label>TwitterHandle:</label>
                               <input
@@ -611,6 +560,17 @@ export default function ContactsAdduser() {
                                 value={data.contactTwitterHandle}
                                 onChange={handleChange}
                                 name="contactTwitterHandle"
+                                className="form-control"
+                                
+                              />
+                            </div>
+                            <div className="col-lg-6">
+                              <label>LinkedinHandle:</label>
+                              <input
+                                type="text"
+                                value={data.contactLinkedinHandle}
+                                onChange={handleChange}
+                                name="contactLinkedinHandle"
                                 className="form-control"
                                 
                               />
@@ -642,17 +602,7 @@ export default function ContactsAdduser() {
                           </div>
 
                           <div className="form-group row mb-2">
-                            <div className="col-lg-6">
-                              <label>LinkedinHandle:</label>
-                              <input
-                                type="text"
-                                value={data.contactLinkedinHandle}
-                                onChange={handleChange}
-                                name="contactLinkedinHandle"
-                                className="form-control"
-                                
-                              />
-                            </div>
+                            
                             
                           </div>
 
