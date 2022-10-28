@@ -36,6 +36,7 @@ import CdrAdduser from '../modules/cdrs/cdrs-list/components/header/CdrAdduser'
 import ReportsPage from '../modules/reports/ReportsPage'
 import RolesList from '../modules/Roles/rolesList.js'
 import ViewRoles from '../modules/Roles/viewRoles'
+import UserAdduser from '../modules/user-management/users-list/components/header/UserAddUser'
 
 
 
@@ -47,6 +48,7 @@ const PrivateRoutes = () => {
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
   const InboxPage = lazy(() => import('../modules/apps/chat/InboxPage'))
   const UsersPage = lazy(() => import('../modules/user-management/UsersPage'))
+  
   const LeadsPage = lazy(() => import('../modules/leads/LeadsPage'))
   const TargetPage = lazy(() => import('../modules/Targets/TargetPage'))
   const TasksPage = lazy(() => import('../modules/task/TasksPage'))
@@ -80,7 +82,7 @@ const PrivateRoutes = () => {
         <Route path='menu-test' element={<MenuTestPage />} />
         {/* <Route path='targets' element={<TargetsWrapper />} /> */}
         <Route path='editer' element={<EditerPage />} />
-        <Route path='apps/user-management/users/adduser' element={<Adduser />} />
+        <Route path='team-members/team-members/adduser' element={<UserAdduser />} />
         <Route path='leads/list/leadadduser' element={<LeadAdduser />} />
         <Route path='bookings/bookings/bookingadduser' element={<BookingAdduser />} />
         <Route path='target/target/targetadduser' element={<TargetAdduser />} />
@@ -173,22 +175,22 @@ const PrivateRoutes = () => {
         />
 
         <Route
-          path='apps/user-management/*'
+          path='team-members/*'
           element={
             <SuspensedView>
               <UsersPage />
             </SuspensedView>
           }
         />
-        <Route
+        {/* <Route
           path='apps/user-management/*'
           element={
             <SuspensedView>
               <UsersPage />
             </SuspensedView>
           }
-        />
-
+        /> */}
+       
         <Route
           path='tasks/*'
           element={
