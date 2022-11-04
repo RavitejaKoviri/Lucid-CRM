@@ -102,7 +102,7 @@ export function AsideMenuMain() {
       />
 
 
-      <AsideMenuItemWithSubMain
+      {/* <AsideMenuItemWithSubMain
         to='/inbox'
         title='Inbox'
         fontIcon='bi-file-text'
@@ -128,7 +128,7 @@ export function AsideMenuMain() {
           fontIcon='bi-card-text fs-3'
         />
 
-      </AsideMenuItemWithSubMain>
+      </AsideMenuItemWithSubMain> */}
       <AsideMenuItemWithSubMain
         to='/settings'
         title='Settings'
@@ -147,13 +147,13 @@ export function AsideMenuMain() {
 
       </AsideMenuItemWithSubMain>
       {/* settings should have sources config, team members  */}
-      {/* <AsideMenuItem
-        to='/editer'
-        title="Editer"
+      <AsideMenuItem
+        to='/editor'
+        title="Editor"
         fontIcon='bi-card-text fs-3'
         bsTitle={"Editer"}
         className='py-2'
-      /> */}
+      />
 
       <AsideMenuItemWithSubMain
         to='/crafted/pages'
