@@ -33,9 +33,9 @@ export const getUsersById = (id: any, token: any) => (dispatch: any) => {
       dispatch(actions.catchError({ error, callType: callTypes.action }));
     });
 };
-export const CreateUser = (data: any, token: any) => (dispatch: any) =>
+export const CreateUser = (data: any,token:any) => (dispatch: any) =>
   requestFromServer
-    .CreateUser(data, token)
+    .CreateUser(data,token)
     .then((response) => {
       const { data } = response;
       dispatch(actions.fetchedUser({ data }));
@@ -45,3 +45,39 @@ export const CreateUser = (data: any, token: any) => (dispatch: any) =>
       error.clientMessage = "Can't find";
       dispatch(actions.catchError({ error, callType: callTypes.list }));
     });
+    export const fetchRoles = (token:any) => (dispatch: any) =>
+  requestFromServer
+    .getRoles(token)
+    .then((response) => {
+      const { data } = response;
+      dispatch(actions.fetchedRoles({ data }));
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-param-reassign
+      error.clientMessage = "Can't find";
+      dispatch(actions.catchError({ error, callType: callTypes.list }));
+    });
+    export const fetchRoleById = (id:any,token:any) => (dispatch: any) =>
+    requestFromServer
+      .getRoleById(id,token)
+      .then((response) => {
+        const { data } = response;
+        dispatch(actions.fetchedRoleById({ data }));
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-param-reassign
+        error.clientMessage = "Can't find";
+        dispatch(actions.catchError({ error, callType: callTypes.list }));
+      });
+      export const fetchUsersByCompanyId = (id:any,token:any) => (dispatch: any) =>
+      requestFromServer
+        .getAllUsersByCompanyId(id,token)
+        .then((response) => {
+          const { data } = response;
+          dispatch(actions.fetchedUsersByCompanyId({ data }));
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-param-reassign
+          error.clientMessage = "Can't find";
+          dispatch(actions.catchError({ error, callType: callTypes.list }));
+        });
