@@ -51,7 +51,10 @@ function RolePermissions() {
   // console.log(rolePermissionsByAdmin, "rolePermissionsByAdmin");
   // console.log(rolePermissionsById, "rolePermissionsByAdmin");
 
-  const filteredRoles = rolePermissionsByAdmin.filter(o1 => !rolePermissionsById.some(o2 => o1?.allmodule?.id === o2?.allmodule?.id))
+  const filteredRoles = rolePermissionsByAdmin.filter(
+    (o1) =>
+      !rolePermissionsById.some((o2) => o1?.allmodule?.id === o2?.allmodule?.id)
+  );
   // console.log(filteredRoles, "filteredRoles");
   useEffect(() => {
     dispatch(fetchRolePermissions(token));
@@ -76,7 +79,7 @@ function RolePermissions() {
   useEffect(() => {
     dispatch(fetchRolePermissionsById(role, token));
     setLoading(false);
-  }, [loading, dispatch, role])
+  }, [loading, dispatch, role]);
 
   const obj = {};
 
@@ -106,20 +109,19 @@ function RolePermissions() {
     navigate(-1);
   }
 
-
   return (
-    <div>
+    <div style={{ padding: 30, borderRadius: 8, backgroundColor: "#fff" }}>
       <h1>Role Permissions</h1>
       <div className="d-flex flex-row mt-10">
         <select
           onChange={(e) => setRole(e.target.value)}
           className="col-4 col-xs-6"
           style={{
-            border: "1px solid #666666",
+            border: "1px solid #cdcdcd",
             borderRadius: "6px",
             height: 44,
             fontSize: 16,
-            marginInline: "20px",
+            marginRight: "20px",
             outline: "none",
             paddingInline: "10px",
           }}
@@ -129,23 +131,23 @@ function RolePermissions() {
           </option>
           {user?.isSuperAdmin === true
             ? crmRoles?.map((item) => (
-              <option value={item?.id}>
-                {item?.name} ({item?.company?.companyName})
-              </option>
-            ))
-            : crmRolesByAdmin
-              ?.filter((item) => item?.name !== user?.crmrole?.name)
-              .map((item) => (
                 <option value={item?.id}>
                   {item?.name} ({item?.company?.companyName})
                 </option>
-              ))}
+              ))
+            : crmRolesByAdmin
+                ?.filter((item) => item?.name !== user?.crmrole?.name)
+                .map((item) => (
+                  <option value={item?.id}>
+                    {item?.name} ({item?.company?.companyName})
+                  </option>
+                ))}
         </select>
         <select
           onChange={(e) => setModule(e.target.value)}
           className="col-4"
           style={{
-            border: "1px solid #666666",
+            border: "1px solid #cdcdcd",
             borderRadius: "6px",
             height: 44,
             fontSize: 16,
@@ -159,13 +161,13 @@ function RolePermissions() {
           </option>
           {user?.isSuperAdmin === true
             ? allModules?.map((item) => (
-              <option value={item?.id}>{item?.name}</option>
-            ))
+                <option value={item?.id}>{item?.name}</option>
+              ))
             : filteredRoles?.map((item) => (
-              <option value={item?.allmodule?.id}>
-                {item?.allmodule?.name}
-              </option>
-            ))}
+                <option value={item?.allmodule?.id}>
+                  {item?.allmodule?.name}
+                </option>
+              ))}
         </select>
       </div>
       <div className="d-flex flex-row mt-20">
@@ -175,7 +177,7 @@ function RolePermissions() {
               onChange={(e) => setCompany(e.target.value)}
               className="col-4 col-xs-6"
               style={{
-                border: "1px solid #666666",
+                border: "1px solid #cdcdcd",
                 borderRadius: "6px",
                 height: 44,
                 fontSize: 16,
