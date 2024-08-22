@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/crmroles",
+      "handler": "crmrole.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/crmroles/count",
+      "handler": "crmrole.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/crmroles/:id",
+      "handler": "crmrole.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/crmroles",
+      "handler": "crmrole.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/crmroles/:id",
+      "handler": "crmrole.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/crmroles/:id",
+      "handler": "crmrole.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

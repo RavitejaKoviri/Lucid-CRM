@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_statuses",
+  "info": {
+    "singularName": "lead-status",
+    "pluralName": "lead-statuses",
+    "displayName": "Lead-status",
+    "name": "lead-status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leadStatusName": {
+      "type": "string"
+    }
+  }
+}

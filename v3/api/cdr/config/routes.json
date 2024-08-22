@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cdrs",
+      "handler": "cdr.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cdrs/count",
+      "handler": "cdr.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cdrs/:id",
+      "handler": "cdr.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cdrs",
+      "handler": "cdr.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cdrs/:id",
+      "handler": "cdr.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cdrs/:id",
+      "handler": "cdr.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

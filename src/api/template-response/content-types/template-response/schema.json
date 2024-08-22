@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "template_responses",
+  "info": {
+    "singularName": "template-response",
+    "pluralName": "template-responses",
+    "displayName": "Template-response",
+    "name": "template-response"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "template": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::template.template",
+      "inversedBy": "templateResponses"
+    },
+    "responseField1": {
+      "type": "string"
+    },
+    "responseField2": {
+      "type": "string"
+    },
+    "responserName": {
+      "type": "string"
+    }
+  }
+}

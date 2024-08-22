@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticket_statuses",
+  "info": {
+    "name": "TicketStatus"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ticketStatusName": {
+      "type": "string"
+    }
+  }
+}

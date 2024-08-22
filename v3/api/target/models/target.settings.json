@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "targets",
+  "info": {
+    "name": "target",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "targetName": {
+      "type": "string"
+    },
+    "assignedTo": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "targetDescription": {
+      "type": "text"
+    },
+    "targetStatus": {
+      "model": "target-status"
+    },
+    "company": {
+      "model": "company"
+    },
+    "targetDueDate": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

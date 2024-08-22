@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deals",
+  "info": {
+    "singularName": "deal",
+    "pluralName": "deals",
+    "displayName": "Deal",
+    "name": "deal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dealName": {
+      "type": "string"
+    },
+    "dealType": {
+      "type": "enumeration",
+      "enum": [
+        "ExistingBusiness",
+        "NewBusiness"
+      ]
+    },
+    "dealContactPersonName": {
+      "type": "string"
+    },
+    "dealContactPersonPhoneNumber": {
+      "type": "string"
+    },
+    "dealContactPersonEmail": {
+      "type": "string"
+    },
+    "dealContactPersonAlternateEmail": {
+      "type": "string"
+    },
+    "dealContactPersonAlternatePhoneNumber": {
+      "type": "string"
+    },
+    "dealSource": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::source.source"
+    },
+    "campaignSource": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::campaign.campaign"
+    },
+    "dealOwner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "dealStatus": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::deal-status.deal-status"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": true,
+      "required": false
+    }
+  }
+}

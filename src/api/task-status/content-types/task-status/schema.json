@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_statuses",
+  "info": {
+    "singularName": "task-status",
+    "pluralName": "task-statuses",
+    "displayName": "Task-status",
+    "name": "task-status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "taskStatusName": {
+      "type": "string"
+    }
+  }
+}

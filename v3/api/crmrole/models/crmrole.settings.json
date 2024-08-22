@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crmroles",
+  "info": {
+    "name": "crmrole",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "model": "company"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cdrs",
+  "info": {
+    "singularName": "cdr",
+    "pluralName": "cdrs",
+    "displayName": "Cdr",
+    "name": "cdr"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "string",
+      "unique": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "call_duration": {
+      "type": "string"
+    },
+    "department_name": {
+      "type": "string"
+    },
+    "agent_number": {
+      "type": "string"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "client_number": {
+      "type": "string"
+    },
+    "recording_url": {
+      "type": "string"
+    }
+  }
+}

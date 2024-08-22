@@ -1,0 +1,152 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "name": "Lead",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leadFirstName": {
+      "type": "string"
+    },
+    "leadPhonenumber": {
+      "type": "string"
+    },
+    "leadMobileNumber": {
+      "type": "string"
+    },
+    "leadIndustry": {
+      "type": "string"
+    },
+    "leadAnnualRevenueContribution": {
+      "type": "string"
+    },
+    "leadEmailOptOut": {
+      "type": "string"
+    },
+    "leadCompanyName": {
+      "type": "string"
+    },
+    "leadLastName": {
+      "type": "string"
+    },
+    "leadEmail": {
+      "type": "string"
+    },
+    "leadWebsite": {
+      "type": "string"
+    },
+    "leadSource": {
+      "model": "source"
+    },
+    "campaignSource": {
+      "model": "campaign"
+    },
+    "company": {
+      "model": "company"
+    },
+    "leadStatus": {
+      "model": "lead-status"
+    },
+    "leadOwner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "leadId": {
+      "type": "string"
+    },
+    "leadGender": {
+      "type": "string"
+    },
+    "leadSpecialityName": {
+      "type": "string"
+    },
+    "leadAddress": {
+      "type": "string"
+    },
+    "leadAppointmentDate": {
+      "type": "string"
+    },
+    "leadStatusId": {
+      "type": "string"
+    },
+    "leadStatusName": {
+      "type": "string"
+    },
+    "utmSource": {
+      "type": "string"
+    },
+    "utmMedium": {
+      "type": "string"
+    },
+    "utmCampaign": {
+      "type": "string"
+    },
+    "utmAdgroup": {
+      "type": "string"
+    },
+    "utmTerm": {
+      "type": "string"
+    },
+    "leadBusinessUnit": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "leadTestName": {
+      "type": "string"
+    },
+    "leadDigitalMediaSource": {
+      "type": "string"
+    },
+    "revenue": {
+      "type": "string"
+    },
+    "orderId": {
+      "type": "string"
+    },
+    "billNumber": {
+      "type": "string"
+    },
+    "leadLocation": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "customerStatus": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "leadAge": {
+      "type": "integer"
+    },
+    "leadRemarks": {
+      "type": "text"
+    },
+    "leadCallType": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/package.json b/package.json[m
+[1mindex b316a9b..a19f8a0 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -14,19 +14,13 @@[m
+     "sendmail": "^1.6.1",[m
+     "sharp": "^0.31.3",[m
+     "shortid": "^2.2.16",[m
+[31m-    "strapi": "^3.6.6",[m
+[31m-    "strapi-admin": "3.6.6",[m
+     "strapi-connector-mongoose": "3.6.6",[m
+[31m-    "strapi-plugin-content-manager": "3.6.6",[m
+[31m-    "strapi-plugin-content-type-builder": "3.6.6",[m
+[31m-    "strapi-plugin-documentation": "^3.6.6",[m
+[31m-    "strapi-plugin-email": "3.6.6",[m
+[31m-    "strapi-plugin-i18n": "3.6.6",[m
+[31m-    "strapi-plugin-upload": "3.6.6",[m
+[31m-    "strapi-plugin-users-permissions": "3.6.6",[m
+[31m-    "strapi-provider-email-nodemailer": "^3.6.10",[m
+     "strapi-provider-email-smtp": "^1.0.3",[m
+[31m-    "strapi-utils": "3.6.6"[m
+[32m+[m[32m    "@strapi/strapi": "4.25.5",[m
+[32m+[m[32m    "@strapi/plugin-documentation": "4.25.5",[m
+[32m+[m[32m    "@strapi/plugin-i18n": "4.25.5",[m
+[32m+[m[32m    "@strapi/plugin-users-permissions": "4.25.5",[m
+[32m+[m[32m    "@strapi/provider-email-nodemailer": "4.25.5"[m
+   },[m
+   "author": {[m
+     "name": "A Strapi developer"[m
+[36m@@ -35,8 +29,8 @@[m
+     "uuid": "4a36e59a-4196-4a59-8ea7-53732de92e95"[m
+   },[m
+   "engines": {[m
+[31m-    "node": ">=10.16.0 <=14.x.x",[m
+[31m-    "npm": "^6.0.0"[m
+[32m+[m[32m    "node": ">=14.19.1 <=16.x.x",[m
+[32m+[m[32m    "npm": ">=6.0.0"[m
+   },[m
+   "license": "MIT"[m
+ }[m

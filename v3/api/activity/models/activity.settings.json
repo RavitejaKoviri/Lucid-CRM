@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "Activity",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activityName": {
+      "type": "string"
+    },
+    "company": {
+      "model": "company"
+    },
+    "activityTime": {
+      "type": "string"
+    }
+  }
+}

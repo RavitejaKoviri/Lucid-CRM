@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "target_statuses",
+  "info": {
+    "singularName": "target-status",
+    "pluralName": "target-statuses",
+    "displayName": "Target-status",
+    "name": "target-status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "targetStatusName": {
+      "type": "string"
+    }
+  }
+}

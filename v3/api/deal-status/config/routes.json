@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/deal-statuses",
+      "handler": "deal-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deal-statuses/count",
+      "handler": "deal-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deal-statuses/:id",
+      "handler": "deal-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deal-statuses",
+      "handler": "deal-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/deal-statuses/:id",
+      "handler": "deal-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/deal-statuses/:id",
+      "handler": "deal-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

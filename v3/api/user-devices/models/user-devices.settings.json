@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_devices",
+  "info": {
+    "name": "userDevices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "deviceName": {
+      "type": "string"
+    },
+    "users_id": {
+      "via": "user_device",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "fcmToken": {
+      "type": "string"
+    },
+    "deviceID": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "carrier": {
+      "type": "string"
+    },
+    "versionCode": {
+      "type": "string"
+    },
+    "buildNumber": {
+      "type": "string"
+    },
+    "deviceOS": {
+      "type": "string"
+    },
+    "osVersion": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "name": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ticketName": {
+      "type": "string"
+    },
+    "ticketPriority": {
+      "type": "enumeration",
+      "enum": [
+        "High",
+        "Medium",
+        "Low",
+        "Blocker"
+      ]
+    },
+    "ticketAssignedTo": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "ticketStatus": {
+      "model": "ticket-status"
+    },
+    "customer": {
+      "model": "customer"
+    },
+    "company": {
+      "model": "company"
+    },
+    "ticketStartDate": {
+      "type": "string"
+    },
+    "ticketEndDate": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "template_responses",
+  "info": {
+    "name": "templateResponse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "template": {
+      "via": "templateResponses",
+      "model": "templates"
+    },
+    "responseField1": {
+      "type": "string"
+    },
+    "responseField2": {
+      "type": "string"
+    },
+    "responserName": {
+      "type": "string"
+    }
+  }
+}

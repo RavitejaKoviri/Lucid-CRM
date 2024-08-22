@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "companyGSTNumber": {
+      "type": "string"
+    },
+    "companyPANNumber": {
+      "type": "string"
+    },
+    "companyTANNumber": {
+      "type": "string"
+    },
+    "companyWebsocCRMUniqueID": {
+      "type": "biginteger"
+    },
+    "companyIndustry": {
+      "model": "industry"
+    },
+    "users": {
+      "via": "company",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "brands": {
+      "via": "company",
+      "collection": "brand"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lead-statuses",
+      "handler": "lead-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lead-statuses/count",
+      "handler": "lead-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lead-statuses/:id",
+      "handler": "lead-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lead-statuses",
+      "handler": "lead-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lead-statuses/:id",
+      "handler": "lead-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lead-statuses/:id",
+      "handler": "lead-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

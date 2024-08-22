@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "path_lab_test_bookings",
+  "info": {
+    "singularName": "path-lab-test-booking",
+    "pluralName": "path-lab-test-bookings",
+    "displayName": "Path-lab-test-booking",
+    "name": "path-lab-test-booking"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pathlabTestBookingStatus": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pathlab-test-booking-status.pathlab-test-booking-status"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}

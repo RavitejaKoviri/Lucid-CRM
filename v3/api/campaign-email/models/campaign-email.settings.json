@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaign_emails",
+  "info": {
+    "name": "campaignEmail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaignEmailName": {
+      "type": "string"
+    },
+    "campaignEmailTopic": {
+      "type": "string"
+    },
+    "campaignEmailSubject": {
+      "type": "text"
+    },
+    "campaignEmailSender": {
+      "type": "string"
+    },
+    "campaignEmailContent": {
+      "type": "richtext"
+    },
+    "campaign": {
+      "model": "campaign"
+    }
+  }
+}
