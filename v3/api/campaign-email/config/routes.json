@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/campaign-emails",
+      "handler": "campaign-email.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/campaign-emails/count",
+      "handler": "campaign-email.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/campaign-emails/:id",
+      "handler": "campaign-email.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/campaign-emails",
+      "handler": "campaign-email.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/campaign-emails/:id",
+      "handler": "campaign-email.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/campaign-emails/:id",
+      "handler": "campaign-email.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

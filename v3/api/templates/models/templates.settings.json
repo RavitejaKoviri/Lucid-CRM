@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "templates",
+  "info": {
+    "name": "templates",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "fieldUser": {
+      "type": "string"
+    },
+    "fieldPassword": {
+      "type": "string"
+    },
+    "fontSize": {
+      "type": "string"
+    },
+    "nameOfTemplate": {
+      "type": "string"
+    },
+    "templateResponses": {
+      "via": "template",
+      "collection": "template-response"
+    },
+    "uniqueId": {
+      "type": "string"
+    }
+  }
+}

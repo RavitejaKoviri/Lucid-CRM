@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pathlab_test_booking_statuses",
+  "info": {
+    "singularName": "pathlab-test-booking-status",
+    "pluralName": "pathlab-test-booking-statuses",
+    "displayName": "Pathlab-test-booking-status",
+    "name": "pathlab-test-booking-status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PathlabTestBookingStatusName": {
+      "type": "string"
+    }
+  }
+}

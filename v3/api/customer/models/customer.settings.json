@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customerName": {
+      "type": "string"
+    },
+    "customerPhoneNumber": {
+      "type": "string"
+    },
+    "customerEmail": {
+      "type": "string"
+    },
+    "customerIndustry": {
+      "type": "string"
+    },
+    "customerGender": {
+      "type": "string"
+    },
+    "customerAge": {
+      "type": "biginteger"
+    },
+    "customerAddress": {
+      "type": "text"
+    },
+    "company": {
+      "model": "company"
+    },
+    "campaignSource": {
+      "model": "campaign"
+    }
+  }
+}

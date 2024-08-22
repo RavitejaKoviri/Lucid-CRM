@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allmodules",
+  "info": {
+    "singularName": "allmodule",
+    "pluralName": "allmodules",
+    "displayName": "Allmodule",
+    "name": "allmodule"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

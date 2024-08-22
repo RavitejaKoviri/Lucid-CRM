@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rolepermissions",
+  "info": {
+    "name": "rolepermissions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Create": {
+      "type": "boolean"
+    },
+    "Get": {
+      "type": "boolean"
+    },
+    "Update": {
+      "type": "boolean"
+    },
+    "Delete": {
+      "type": "boolean"
+    },
+    "allmodule": {
+      "model": "allmodule"
+    },
+    "crmrole": {
+      "model": "crmrole"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "Task",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "contact": {
+      "model": "contact"
+    },
+    "taskDescription": {
+      "type": "string"
+    },
+    "taskRepeat": {
+      "type": "boolean"
+    },
+    "taskRemainder": {
+      "type": "boolean"
+    },
+    "taskPriority": {
+      "type": "enumeration",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "taskStatus": {
+      "model": "task-status"
+    },
+    "company": {
+      "model": "company"
+    },
+    "taskDueDate": {
+      "type": "string"
+    },
+    "taskOwner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

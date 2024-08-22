@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaign_statuses",
+  "info": {
+    "singularName": "campaign-status",
+    "pluralName": "campaign-statuses",
+    "displayName": "Campaign-status",
+    "name": "campaign-status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaignStatusName": {
+      "type": "string"
+    }
+  }
+}

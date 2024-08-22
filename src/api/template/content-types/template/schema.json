@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "templates",
+  "info": {
+    "singularName": "template",
+    "pluralName": "templates",
+    "displayName": "Template",
+    "name": "template"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "fieldUser": {
+      "type": "string"
+    },
+    "fieldPassword": {
+      "type": "string"
+    },
+    "fontSize": {
+      "type": "string"
+    },
+    "nameOfTemplate": {
+      "type": "string"
+    },
+    "templateResponses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::template-response.template-response",
+      "mappedBy": "template"
+    },
+    "uniqueId": {
+      "type": "string"
+    }
+  }
+}

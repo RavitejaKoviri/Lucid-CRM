@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/path-lab-test-bookings",
+      "handler": "path-lab-test-booking.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/path-lab-test-bookings/count",
+      "handler": "path-lab-test-booking.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/path-lab-test-bookings/:id",
+      "handler": "path-lab-test-booking.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/path-lab-test-bookings",
+      "handler": "path-lab-test-booking.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/path-lab-test-bookings/:id",
+      "handler": "path-lab-test-booking.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/path-lab-test-bookings/:id",
+      "handler": "path-lab-test-booking.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/campaign-statuses",
+      "handler": "campaign-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/campaign-statuses/count",
+      "handler": "campaign-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/campaign-statuses/:id",
+      "handler": "campaign-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/campaign-statuses",
+      "handler": "campaign-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/campaign-statuses/:id",
+      "handler": "campaign-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/campaign-statuses/:id",
+      "handler": "campaign-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

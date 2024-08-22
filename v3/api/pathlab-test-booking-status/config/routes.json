@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pathlab-test-booking-statuses",
+      "handler": "pathlab-test-booking-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pathlab-test-booking-statuses/count",
+      "handler": "pathlab-test-booking-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pathlab-test-booking-statuses/:id",
+      "handler": "pathlab-test-booking-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pathlab-test-booking-statuses",
+      "handler": "pathlab-test-booking-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pathlab-test-booking-statuses/:id",
+      "handler": "pathlab-test-booking-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pathlab-test-booking-statuses/:id",
+      "handler": "pathlab-test-booking-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crmroles",
+  "info": {
+    "singularName": "crmrole",
+    "pluralName": "crmroles",
+    "displayName": "Crmrole",
+    "name": "crmrole"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deal_statuses",
+  "info": {
+    "name": "DealStatus"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dealStatusName": {
+      "type": "string"
+    }
+  }
+}

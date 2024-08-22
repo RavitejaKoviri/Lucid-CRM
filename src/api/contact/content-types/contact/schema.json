@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "name": "contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactName": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "contactMobile": {
+      "type": "string"
+    },
+    "contactTitle": {
+      "type": "string"
+    },
+    "contactFirstName": {
+      "type": "string"
+    },
+    "contactLastName": {
+      "type": "string"
+    },
+    "contactJobTitle": {
+      "type": "string"
+    },
+    "contactCompanyName": {
+      "type": "string"
+    },
+    "contactCity": {
+      "type": "string"
+    },
+    "contactAddress": {
+      "type": "text"
+    },
+    "contactState": {
+      "type": "string"
+    },
+    "contactPincode": {
+      "type": "string"
+    },
+    "contactCountry": {
+      "type": "string"
+    },
+    "contactWebsiteAddress": {
+      "type": "string"
+    },
+    "contactSecondaryEmail": {
+      "type": "string"
+    },
+    "contactNotes": {
+      "type": "string"
+    },
+    "contactTwitterHandle": {
+      "type": "string"
+    },
+    "contactFacebookHandle": {
+      "type": "string"
+    },
+    "contactInstagramHandle": {
+      "type": "string"
+    },
+    "contactLinkedinHandle": {
+      "type": "string"
+    },
+    "contactSource": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::source.source"
+    },
+    "campaignSource": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::campaign.campaign"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": true,
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

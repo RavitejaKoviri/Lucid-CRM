@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deals",
+  "info": {
+    "name": "Deal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dealName": {
+      "type": "string"
+    },
+    "dealType": {
+      "type": "enumeration",
+      "enum": [
+        "ExistingBusiness",
+        "NewBusiness"
+      ]
+    },
+    "dealContactPersonName": {
+      "type": "string"
+    },
+    "dealContactPersonPhoneNumber": {
+      "type": "string"
+    },
+    "dealContactPersonEmail": {
+      "type": "string"
+    },
+    "dealContactPersonAlternateEmail": {
+      "type": "string"
+    },
+    "dealContactPersonAlternatePhoneNumber": {
+      "type": "string"
+    },
+    "dealSource": {
+      "model": "source"
+    },
+    "campaignSource": {
+      "model": "campaign"
+    },
+    "dealOwner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "model": "company"
+    },
+    "dealStatus": {
+      "model": "deal-status"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

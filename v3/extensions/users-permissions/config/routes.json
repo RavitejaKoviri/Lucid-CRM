@@ -1,0 +1,21 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/send",
+        "handler": "user.sendMail",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/getAccessToken",
+        "handler": "user.getAccessToken",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
+  
