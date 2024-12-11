@@ -10,7 +10,7 @@ module.exports = {
   settings: {
     cors: {
       enabled: true,
-      origin: ['http://localhost:4377','*'] // Add your frontend URL here
+      origin: ['http://localhost:4005','*'] // Add your frontend URL here
     },
   },
 };

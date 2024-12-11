@@ -33,7 +33,7 @@ module.exports = {
               client_secret: "QD3wOyGZ365vOZcE"
             },
           })
-          console.log(response);
+          console.log(response,"from user.js ");
           return response;
         } catch (error) {
           console.log(error)
