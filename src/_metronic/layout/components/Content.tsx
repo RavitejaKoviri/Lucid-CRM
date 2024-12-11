@@ -1,4 +1,4 @@
-import {FC, useEffect} from 'react'
+import React,{FC, useEffect} from 'react'
 import {useLocation} from 'react-router'
 import clsx from 'clsx'
 import {useLayout} from '../core'

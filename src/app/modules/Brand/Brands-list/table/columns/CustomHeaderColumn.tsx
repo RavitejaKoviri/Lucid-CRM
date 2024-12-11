@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React,{ FC } from 'react'
 import { ColumnInstance } from 'react-table'
 import { Lead } from '../../core/_models'
 

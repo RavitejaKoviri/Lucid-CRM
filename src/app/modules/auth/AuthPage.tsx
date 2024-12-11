@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {useEffect} from 'react'
+import React from 'react'
 import {Outlet, Route, Routes} from 'react-router-dom'
 import {Registration} from './components/Registration'
 import {ForgotPassword} from './components/ForgotPassword'

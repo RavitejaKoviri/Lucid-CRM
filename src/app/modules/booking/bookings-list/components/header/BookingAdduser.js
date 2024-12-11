@@ -56,7 +56,7 @@ export default function BookingAdduser() {
     currentMins = 0;
   }
   const newdate = new Date();
-  newdate?.setDate(newdate?.getDate() + 9);
+  // newdate?.setDate(newdate?.getDate() + 9);
   // const user = useSelector((state) => state?.auth?.user);
   // const token = useSelector((state: any) => state?.auth?.authToken);
   const doctor = useSelector((state) => state?.booking?.doctors);

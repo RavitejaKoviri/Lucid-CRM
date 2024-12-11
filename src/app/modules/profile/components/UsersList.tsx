@@ -1,3 +1,4 @@
+import React from 'react'
 import {FC} from 'react'
 import {IconUserModel} from '../ProfileModels'
 import {toAbsoluteUrl} from '../../../../_metronic/helpers'

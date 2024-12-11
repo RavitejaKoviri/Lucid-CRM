@@ -1,4 +1,5 @@
 import {useListView} from '../../core/ListViewProvider'
+import React from 'react'
 import {DealsListToolbar} from './DealListToolbar'
 import {DealsListGrouping} from './DealsListGrouping'
 import {DealsListSearchComponent} from './DealsListSearchComponent'

@@ -1,4 +1,4 @@
-import { Column } from 'react-table'
+import React,{ Column } from 'react-table'
 import { UserInfoCell } from './CampaignInfoCell'
 import { CampaignLastLoginCell } from './CampaignLastLoginCell'
 import { CampaignTwoStepsCell } from './CampaignTwoStepsCell'

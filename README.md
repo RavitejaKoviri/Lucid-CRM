@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Metronic - Bootstrap 5 HTML, React, Angular, VueJS & Laravel Admin Dashboard Theme
 
 - The current package includes the React version with Demo 1 only and other demos can be downloaded online from [Metronic Downloads](//devs.keenthemes.com/metronic)
@@ -12,3 +13,6 @@
   check our marketplace for more amazing products: [Keenthemes Marketplace](//keenthemes.com/)
 
 Happy coding with Metronic!
+=======
+# Lucid-CRM
+>>>>>>> 2adc4649b7dcb2970979838efb363a4c66c4fd72

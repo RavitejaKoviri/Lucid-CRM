@@ -1,5 +1,6 @@
 import { KTSVG } from '../../../../../_metronic/helpers'
 import { useListView } from '../core/ListViewProvider'
+import React from 'react'
 
 const ContactEditModalHeader = () => {
   const { setItemIdForUpdate } = useListView()

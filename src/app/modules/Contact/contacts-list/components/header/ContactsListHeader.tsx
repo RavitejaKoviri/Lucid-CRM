@@ -1,4 +1,5 @@
 import {useListView} from '../../core/ListViewProvider'
+import React from 'react'
 import {ContactsListToolbar} from './ContactListToolbar'
 import {ContactsListGrouping} from './ContactsListGrouping'
 import {ContactsListSearchComponent} from './ContactsListSearchComponent'

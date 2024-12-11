@@ -1,4 +1,5 @@
 import {useEffect} from 'react'
+import React from 'react'
 import {Outlet, useLocation} from 'react-router-dom'
 import {AsideDefault} from './components/aside/AsideDefault'
 import {Footer} from './components/Footer'

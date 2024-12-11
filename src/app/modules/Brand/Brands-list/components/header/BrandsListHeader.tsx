@@ -1,4 +1,5 @@
 import { useListView } from '../../core/ListViewProvider'
+import React from 'react'
 import { BrandsListToolbar } from './BrandsListToolbar'
 import { BrandsListGrouping } from './BrandsListGrouping'
 import { BrandsListSearchComponent } from './BrandsListSearchComponent'

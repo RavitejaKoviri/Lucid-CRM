@@ -1,4 +1,5 @@
 import {useListView} from '../../core/ListViewProvider'
+import React from 'react'
 import {BookingsListToolbar} from './BookingListToolbar'
 import {BookingsListGrouping} from './BookingsListGrouping'
 import {BookingsListSearchComponent} from './BookingsListSearchComponent'

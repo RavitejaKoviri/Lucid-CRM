@@ -1,4 +1,4 @@
-import { Column } from "react-table";
+import React,{ Column } from "react-table";
 import { LeadInfoCell } from "./LeadInfoCell";
 import { LeadLastLoginCell } from "./LeadLastLoginCell";
 import { LeadTwoStepsCell } from "./LeadTwoStepsCell";

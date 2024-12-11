@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import React from 'react'
 import {KTSVG} from '../../../helpers'
 import {ThemeModeComponent} from '../../../assets/ts/layout'
 import {ThemeModeType, useThemeMode} from './ThemeModeProvider'

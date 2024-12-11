@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext } from 'react'
+import React from 'react'
 import { KTSVG } from '../../../../../../_metronic/helpers'
 import BookingContext from '../../table/columns/context';
 // import { useQueryRequest } from '../../core/QueryRequestProvider'

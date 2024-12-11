@@ -1,4 +1,5 @@
 import {FC} from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import {WithChildren} from '../react18MigrationHelpers'
 

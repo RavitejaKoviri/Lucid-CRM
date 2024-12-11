@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {FC, createContext, useContext, useEffect, useState} from 'react'
+import React from 'react'
 import {WithChildren} from '../../helpers'
 
 export interface PageLink {

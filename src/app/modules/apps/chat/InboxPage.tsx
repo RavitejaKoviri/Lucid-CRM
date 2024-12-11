@@ -1,4 +1,5 @@
 import {Navigate, Route, Routes, Outlet} from 'react-router-dom'
+import React from 'react'
 import {PageLink, PageTitle} from '../../../../_metronic/layout/core'
 import {Messages} from './components/Messages'
 import {Compose} from './components/Compose'

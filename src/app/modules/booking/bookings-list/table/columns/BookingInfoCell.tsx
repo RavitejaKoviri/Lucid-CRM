@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react'
 import clsx from 'clsx'
 import { FC } from 'react'
 import { toAbsoluteUrl } from '../../../../../../_metronic/helpers'

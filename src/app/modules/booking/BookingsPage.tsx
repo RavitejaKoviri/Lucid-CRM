@@ -1,3 +1,4 @@
+import React from 'react'
 import { Route, Routes, Outlet, Navigate } from 'react-router-dom'
 import { PageLink, PageTitle } from '../../../_metronic/layout/core'
 import { BookingsListWrapper } from './bookings-list/BookingsList'

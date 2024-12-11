@@ -1,4 +1,4 @@
-import { Column } from 'react-table'
+import React,{ Column } from 'react-table'
 import { UserInfoCell } from './UserInfoCell'
 import { UserLastLoginCell } from './UserLastLoginCell'
 import { UserTwoStepsCell } from './UserTwoStepsCell'

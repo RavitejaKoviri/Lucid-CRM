@@ -1,4 +1,5 @@
 import { KTSVG } from '../../../../../_metronic/helpers'
+import React from 'react'
 import { useListView } from '../core/ListViewProvider'
 
 const BookingEditModalHeader = () => {

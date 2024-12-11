@@ -1,3 +1,4 @@
+import React from "react"
 const CdrsListLoading = () => {
   const styles = {
     borderRadius: '0.475rem',

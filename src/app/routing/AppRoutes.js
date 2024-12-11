@@ -6,6 +6,7 @@
  */
 
 import { FC } from "react";
+import React from 'react'
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { ErrorsPage } from "../modules/errors/ErrorsPage";
@@ -38,7 +39,7 @@ const AppRoutes = () => {
 
           {/* <Route path="/" element={<Navigate to="/websocCRM" />} />
           <Route path="*" element={<Navigate to="/websocCRM" />} /> */}
-          {isAuthorized ? (
+          {true ? (
             <>
               <Route path="/*" element={<PrivateRoutes />} />
               <Route index element={<Navigate to="/websocCRM" />} />

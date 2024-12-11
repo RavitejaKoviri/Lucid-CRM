@@ -1,4 +1,5 @@
 // import { TargetListLoading } from '../components/loading/TargetListLoading'
+import React from "react"
 const TargetListLoading = () => {
   const styles = {
     borderRadius: '0.475rem',

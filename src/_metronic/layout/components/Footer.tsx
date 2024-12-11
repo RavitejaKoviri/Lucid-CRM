@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react'
 import {FC} from 'react'
 import clsx from 'clsx'
 import {useLayout} from '../core'

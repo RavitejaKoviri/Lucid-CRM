@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FC, useEffect } from 'react'
+import React from 'react'
 import { useMutation, useQueryClient } from 'react-query'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'

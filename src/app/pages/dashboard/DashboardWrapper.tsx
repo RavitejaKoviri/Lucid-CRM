@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";

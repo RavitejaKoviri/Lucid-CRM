@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { FC, useEffect } from "react";
+import React,{ FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { MenuComponent } from "../../../../../../_metronic/assets/ts/components";

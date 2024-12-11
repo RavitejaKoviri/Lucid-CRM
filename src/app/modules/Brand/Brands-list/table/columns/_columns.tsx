@@ -1,3 +1,4 @@
+import React from 'react'
 import { Column } from 'react-table'
 import { BrandsInfoCell } from './BrandsInfoCell'
 import { BrandsLastLoginCell } from './BrandsLastLoginCell'

@@ -1,3 +1,4 @@
+import React from 'react'
 import clsx from 'clsx'
 import { FC, PropsWithChildren, useMemo } from 'react'
 import { HeaderProps } from 'react-table'

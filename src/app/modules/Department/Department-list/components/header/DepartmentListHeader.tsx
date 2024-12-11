@@ -1,4 +1,5 @@
 import { useListView } from '../../core/ListViewProvider'
+import React from 'react'
 import { DepartmentListToolbar } from './DepartmentListToolbar'
 import { DepartmentListGrouping } from './DepartmentListGrouping'
 import { DepartmentListSearchComponent } from './DepartmentListSearchComponent'

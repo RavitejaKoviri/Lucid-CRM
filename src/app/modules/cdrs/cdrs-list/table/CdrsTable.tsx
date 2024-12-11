@@ -1,4 +1,5 @@
 /* eslint-disable array-callback-return */
+import React from 'react'
 import { useContext, useEffect, useMemo, useState } from 'react'
 import { useTable, ColumnInstance, Row } from 'react-table'
 import { CustomHeaderColumn } from './columns/CustomHeaderColumn'

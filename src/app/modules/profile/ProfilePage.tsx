@@ -1,4 +1,5 @@
 import {Navigate, Routes, Route, Outlet} from 'react-router-dom'
+import React from 'react'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
 import {Overview} from './components/Overview'
 import {Projects} from './components/Projects'

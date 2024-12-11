@@ -1,4 +1,5 @@
 import {Navigate, Route, Routes, Outlet} from 'react-router-dom'
+import React from 'react'
 import {PageLink, PageTitle} from '../../../../_metronic/layout/core'
 import {Private} from './components/Private'
 import {Group} from './components/Group'

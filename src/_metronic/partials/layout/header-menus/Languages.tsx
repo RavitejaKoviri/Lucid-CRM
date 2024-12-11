@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx'
+import React from 'react'
 import {FC} from 'react'
 import {toAbsoluteUrl} from '../../../helpers'
 import {useLang, setLanguage} from '../../../i18n/Metronici18n'

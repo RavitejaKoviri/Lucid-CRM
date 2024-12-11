@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react'
 import {StepProps} from '../IAppModels'
 
 const Step3 = ({data, updateData, hasError}: StepProps) => {

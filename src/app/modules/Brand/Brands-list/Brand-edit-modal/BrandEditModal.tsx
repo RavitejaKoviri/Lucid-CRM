@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React,{ useEffect } from 'react'
 import { BrandsEditModalHeader } from './BrandEditModalHeader'
 import { BrandsEditModalFormWrapper } from './BrandEditModalFormWrapper'
 

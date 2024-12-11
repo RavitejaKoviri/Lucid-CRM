@@ -29,7 +29,8 @@ export function LeadsReport() {
     (state: any) => state?.Reports?.Leads);
 
   const [search, setSearch] = useState('');
-  const [date, setDate] = useState('');
+  const [fdate, setFDate] = useState('');
+  const [tdate, setTDate] = useState('');
 
   const [perPage, setPerPage] = useState([]);
   const [lead, setLead] = useState([]);
@@ -78,7 +79,8 @@ export function LeadsReport() {
 
             <div className="card-toolbar flex-row-fluid justify-content-end gap-5">
 
-              <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="form-control form-control-solid w-100 mw-250px" placeholder="Pick date range" />
+              <input type="date" value={fdate} onChange={(e) => setFDate(e.target.value)} className="form-control form-control-solid w-100 mw-250px" placeholder="Pick date range from" />
+              <input type="date" value={tdate} onChange={(e) => setTDate(e.target.value)} className="form-control form-control-solid w-100 mw-250px" placeholder="Pick date range to" />
 
               <div className="w-150px">
 
@@ -167,10 +169,18 @@ export function LeadsReport() {
                     return val;
                   }
                 }).filter((val: any) => {
-                  if (date === "") {
+                  console.log(val)
+                  if (fdate === "") {
                     return val;
                   }
-                  if (val?.createdAt?.slice(0, 10)?.toLowerCase()?.includes(date?.toLowerCase())) {
+                  if (val?.date?.slice(0, 10)?.toLowerCase()?.includes(fdate?.toLowerCase())) {
+                    return val;
+                  }
+                }).filter((val: any) => {
+                  if (tdate === "") {
+                    return val;
+                  }
+                  if (val?.date?.slice(0, 10)?.toLowerCase()?.includes(tdate?.toLowerCase())) {
                     return val;
                   }
                 }).map((item: any) => (

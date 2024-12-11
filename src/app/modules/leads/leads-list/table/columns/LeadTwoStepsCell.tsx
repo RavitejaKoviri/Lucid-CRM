@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import React from 'react'
 
 type Props = {
   two_steps?: boolean

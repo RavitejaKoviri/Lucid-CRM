@@ -1,3 +1,4 @@
+import React from "react"
 const LeadsListLoading = () => {
   const styles = {
     borderRadius: '0.475rem',

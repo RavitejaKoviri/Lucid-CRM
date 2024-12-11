@@ -1,4 +1,5 @@
 import { Column } from "react-table";
+import React from 'react'
 import { CdrInfoCell } from "./CdrInfoCell";
 import { CdrLastLoginCell } from "./CdrLastLoginCell";
 import { CdrTwoStepsCell } from "./CdrTwoStepsCell";

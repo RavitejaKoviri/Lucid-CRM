@@ -1,3 +1,4 @@
+import React from 'react'
 import {useListView} from '../../core/ListViewProvider'
 import {CampaignsListToolbar} from './CampaignListToolbar'
 import {CampaignsListGrouping} from './CampaignsListGrouping'

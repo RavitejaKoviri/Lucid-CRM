@@ -1,4 +1,5 @@
 import {FC} from 'react'
+import React from 'react'
 import {KTSVG, toAbsoluteUrl} from '../../../helpers'
 
 const Item2: FC = () => {

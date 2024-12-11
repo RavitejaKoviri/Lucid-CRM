@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import React from 'react'
 import { FC, PropsWithChildren, useMemo } from 'react'
 import { HeaderProps } from 'react-table'
 import { initialQueryState } from '../../../../../../_metronic/helpers'

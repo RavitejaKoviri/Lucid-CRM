@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {FC} from 'react'
+import React from 'react'
 import {toAbsoluteUrl, KTSVG} from '../../../helpers'
 import {Dropdown1} from '../dropdown/Dropdown1'
 

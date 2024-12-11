@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren } from 'react'
+import React from 'react'
 import { HeaderProps } from 'react-table'
 import { useListView } from '../../core/ListViewProvider'
 import { Lead } from '../../core/_models'

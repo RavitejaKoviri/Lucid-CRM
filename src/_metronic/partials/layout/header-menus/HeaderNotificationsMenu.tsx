@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx'
+import React from 'react'
 import {FC} from 'react'
 import {Link} from 'react-router-dom'
 import {KTSVG, toAbsoluteUrl, defaultAlerts, defaultLogs} from '../../../helpers'

@@ -1,3 +1,4 @@
+import React from "react"
 const ContactsListLoading = () => {
   const styles = {
     borderRadius: '0.475rem',

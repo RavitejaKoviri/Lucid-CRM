@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {toAbsoluteUrl} from '../../../../helpers'
+import React from 'react'
 
 const Step5 = () => {
   return (

@@ -1,4 +1,4 @@
-import {FC, PropsWithChildren} from 'react'
+import React,{FC, PropsWithChildren} from 'react'
 import {HeaderProps} from 'react-table'
 import {useListView} from '../../core/ListViewProvider'
 import {Campaign} from '../../core/_models'

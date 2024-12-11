@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
+import React from 'react'
 import {KTSVG} from '../../../../_metronic/helpers'
 import {Step1} from './steps/Step1'
 import {Step2} from './steps/Step2'

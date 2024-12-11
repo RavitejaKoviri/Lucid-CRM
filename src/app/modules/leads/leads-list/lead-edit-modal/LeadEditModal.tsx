@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React,{ useEffect } from 'react'
 import { LeadEditModalHeader } from './LeadEditModalHeader'
 import { LeadEditModalFormWrapper } from './LeadEditModalFormWrapper'
 

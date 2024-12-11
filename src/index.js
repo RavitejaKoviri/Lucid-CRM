@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import React from 'react'
 // Axios
 import axios from "axios";
 import { Chart, registerables } from "chart.js";

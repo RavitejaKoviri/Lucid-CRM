@@ -1,3 +1,4 @@
+import React from 'react'
 import { Column } from 'react-table'
 import { DepartmentInfoCell } from './DepartmentInfoCell'
 import { DepartmentLastLoginCell } from './DepartmentLastLoginCell'

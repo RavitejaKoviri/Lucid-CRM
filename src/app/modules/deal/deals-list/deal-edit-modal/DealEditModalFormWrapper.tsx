@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query'
+import React from 'react'
 import { DealEditModalForm } from './DealEditModalForm'
 import { isNotEmpty, QUERIES } from '../../../../../_metronic/helpers'
 import { useListView } from '../core/ListViewProvider'

@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import { KTSVG } from '../../../../../../_metronic/helpers'
 import TargetContext from '../../table/columns/context';

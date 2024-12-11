@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import {FC} from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 import {useLocation} from 'react-router'
